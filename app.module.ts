@@ -5,28 +5,34 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import { StudentComponent } from './student/student.component';
-import { HomeComponent } from './home/home.component';
+import {FormsModule} from '@angular/forms';
+import { EmployeeComponent } from './employee/employee.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { Page404Component } from './page404/page404.component';
+import { HomeComponent } from './home/home.component';
+import { UserComponent } from './user/user.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    StudentComponent,
-    HomeComponent,
+    EmployeeComponent,
     LoginComponent,
     RegisterComponent,
-    Page404Component
+    Page404Component,
+    HomeComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule, 
-    ReactiveFormsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
